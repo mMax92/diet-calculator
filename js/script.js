@@ -248,20 +248,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(form);
 
-            // const object = {};
+            const object = {};
 
-            // formData.forEach(function(value, key) {
-            //     object[key] = value;
-            // });
-            // const json = JSON.stringify(object);
+            formData.forEach(function(value, key) {
+                object[key] = value;
+            });
 
             fetch('server.php', {
                 method: 'POST',
-                // headers: {
-                //     'Content-type': 'application/json; charset=utf-8'
-                // },
-                body: formData
-            }).then(data => data.text())
+                headers: {
+                    'Content-type': 'application/json; charset=utf-8'
+                },
+                body: JSON.stringify(object)
+            })
+            .then(data => data.text())
             .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
