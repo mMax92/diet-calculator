@@ -1,0 +1,22 @@
+{
+  "name": "diet-calculator",
+  "version": "1.0.0",
+  "description": "This project has been created for learning purpose.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mMax92/diet-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mMax92/diet-calculator/issues"
+  },
+  "homepage": "https://github.com/mMax92/diet-calculator#readme",
+  "devDependencies": {
+    "json-server": "^0.17.3"
+  }
+}
