@@ -1,5 +1,4 @@
 function cookies() {
-    //Cookies consent
 
     class CookieConsent {
         constructor({popup, btnConfirm, btnCancel, activeClass = ''} = {}) {
@@ -81,4 +80,4 @@ function cookies() {
     }
 }
 
-module.exports = cookies;
+export default cookies;

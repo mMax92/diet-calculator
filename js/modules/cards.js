@@ -1,5 +1,6 @@
+import {getSourse} from "../services/services";
+
 function cards() {
-    //Use CLASSES for cards
 
     class MenuCard {
         constructor (src, alt, title, descr, price, parentSelector, ...classes) {
@@ -41,15 +42,6 @@ function cards() {
         }
     }
 
-    const getSourse = async (url) => {
-        const res = await fetch (url);
-            if (!res.ok) {
-                throw new Error (`Could not fetch ${url}, status ${res.status}`); 
-            }
-
-        return await res.json();
-    };
-
     getSourse('http://localhost:3000/menu')
     .then(data => {
         data.forEach(({img, altimg, title, descr, price}) => {
@@ -58,4 +50,4 @@ function cards() {
     });
 }
 
-module.exports = cards;
+export default cards;
